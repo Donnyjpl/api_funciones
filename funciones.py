@@ -23,7 +23,7 @@ def generar_html(lista_aves):
     - str: Cadena de texto con el HTML generado.
     """
     if lista_aves:
-            estructura_html = "<div class='row container'>\n"  # Apertura de la clase row
+            estructura_html = "<div class='row'>\n"  # Apertura de la clase row
             
             for ave in lista_aves:
                 estructura_html += "<div class='col-md-4'>\n"  # Apertura de la clase column
@@ -31,7 +31,7 @@ def generar_html(lista_aves):
                 estructura_html += f"<img src='{ave['images']['main']}' class='card-img-top' alt='foto de la aves'>\n"
                 estructura_html += "<div class='card-body'>\n"
                 estructura_html += f"<h5 class='card-title'>Nombre en Español: {ave['name']['spanish']}</h5>\n"
-                estructura_html += f"<p class='card-text'>Nombre en Inglés: {ave['name']['english']}</p>\n"
+                estructura_html += f"<h5 class='card-title'>Nombre en Inglés: {ave['name']['english']}</h5>\n"
                 estructura_html += "</div></div></div>\n"  # Cierre de la tarjeta (card) y la columna (column)
             
             estructura_html += "</div>\n"  # Cierre de la clase row
